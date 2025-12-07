@@ -14,8 +14,8 @@ import {
     useSidebar,
 } from '@/components/ui/sidebar';
 import { SidebarMenuButtonWithClose } from '@/components/ui/sidebar-menu-button';
-import LogoutButton from '@/components/LogoutButton';
-import AvatarMenu from '@/components/AvatarMenu';
+import LogoutButton from '@/features/auth/components/LogoutButton';
+import AvatarMenu from '@/features/admin/components/AvatarMenu';
 import { getUser } from '@/store/userStore';
 
 interface SidebarLink {

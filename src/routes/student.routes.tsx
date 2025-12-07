@@ -2,14 +2,14 @@ import { RouteObject, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import StudentLayout from '@/layouts/StudentLayout';
 import { ProtectedRoute } from './ProtectedRoute';
-import StudentAttendance from '@/pages/student/Attendance';
-import StudentFees from '@/pages/student/Fees';
-import StudentSchedule from '@/pages/student/Schedule';
-import StudentSettings from '@/pages/student/Settings';
-import StudentProfile from '@/pages/student/Profile';
+import StudentAttendance from '@/features/student/pages/Attendance';
+import StudentFees from '@/features/student/pages/Fees';
+import StudentSchedule from '@/features/student/pages/Schedule';
+import StudentSettings from '@/features/student/pages/Settings';
+import StudentProfile from '@/features/student/pages/Profile';
 
 // Student pages
-const StudentDashboard = lazy(() => import('@/pages/student/Dashboard'));
+const StudentDashboard = lazy(() => import('@/features/student/pages/Dashboard'));
 
 export const studentRoutes: RouteObject = {
     path: '/student',

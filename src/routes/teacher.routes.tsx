@@ -2,15 +2,15 @@ import { RouteObject, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import TeacherLayout from '@/layouts/TeacherLayout';
 import { ProtectedRoute } from './ProtectedRoute';
-import TeacherClasses from '@/pages/teacher/Classes';
-import TeacherAttendance from '@/pages/teacher/Attendance';
-import TeacherSchedule from '@/pages/teacher/Schedule';
-import TeacherSettings from '@/pages/teacher/Settings';
-import TeacherProfile from '@/pages/teacher/Profile';
-import TeacherPayment from '@/pages/teacher/Payment';
+import TeacherClasses from '@/features/teacher/pages/Classes';
+import TeacherAttendance from '@/features/teacher/pages/Attendance';
+import TeacherSchedule from '@/features/teacher/pages/Schedule';
+import TeacherSettings from '@/features/teacher/pages/Settings';
+import TeacherProfile from '@/features/teacher/pages/Profile';
+import TeacherPayment from '@/features/teacher/pages/Payment';
 
 // Teacher pages
-const TeacherDashboard = lazy(() => import('@/pages/teacher/Dashboard'));
+const TeacherDashboard = lazy(() => import('@/features/teacher/pages/Dashboard'));
 
 export const teacherRoutes: RouteObject = {
     path: '/teacher',

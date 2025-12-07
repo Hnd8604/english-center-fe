@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 // Public pages
 const Index = lazy(() => import('@/pages/Index'));
-const Login = lazy(() => import('@/pages/Login'));
+const Login = lazy(() => import('@/features/auth/pages/Login'));
 const NotFound = lazy(() => import('@/pages/NotFound'));
 
 export const publicRoutes: RouteObject[] = [

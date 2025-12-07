@@ -2,16 +2,16 @@ import { RouteObject, Navigate } from 'react-router-dom';
 import { lazy } from 'react';
 import AdminLayout from '@/layouts/AdminLayout';
 import { ProtectedRoute } from './ProtectedRoute';
-import AdminClasses from '@/pages/admin/Classes';
-import AdminFees from '@/pages/admin/Fees';
-import AdminReports from '@/pages/admin/Reports';
-import AdminNotifications from '@/pages/admin/Notifications';
-import AdminSettings from '@/pages/admin/Settings';
-import Users from '@/pages/admin/Users';
-import Banner from '@/pages/admin/Banner';
-import AdminProfile from '@/pages/admin/Profile';
+import AdminClasses from '@/features/classes/pages/Classes';
+import AdminFees from '@/features/payment/pages/Fees';
+import AdminReports from '@/features/admin/pages/Reports';
+import AdminNotifications from '@/features/admin/pages/Notifications';
+import AdminSettings from '@/features/admin/pages/Settings';
+import Users from '@/features/admin/pages/Users';
+import Banner from '@/features/banner/pages/Banner';
+import AdminProfile from '@/features/admin/pages/Profile';
 // Admin pages
-const AdminDashboard = lazy(() => import('@/pages/admin/Dashboard'));
+const AdminDashboard = lazy(() => import('@/features/admin/pages/Dashboard'));
 
 export const adminRoutes: RouteObject = {
     path: '/admin',

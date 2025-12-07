@@ -2,14 +2,14 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import LoginForm from '@/components/LoginForm';
+import LoginForm from '@/features/auth/components/LoginForm';
 import HomeSlider from '@/components/HomeSlider';
 import AboutSection from '@/components/AboutSection';
-import RegisterForm from '@/components/RegisterForm';
+import RegisterForm from '@/features/auth/components/RegisterForm';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import AvatarMenu from '@/components/AvatarMenu';
-import authApi from '@/api/authApi';
+import AvatarMenu from '@/features/admin/components/AvatarMenu';
+import authApi from '@/features/auth/api/authApi';
 import { getUser, useUserDataListener } from '@/store/userStore';
 import { User } from '@/types/user';
 

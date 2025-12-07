@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utils';
 import * as Icons from 'lucide-react';
 
 interface NavItem {

@@ -2,17 +2,17 @@ import { RouteObject, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import ParentLayout from '@/layouts/ParentLayout';
 import { ProtectedRoute } from './ProtectedRoute';
-import ParentChildren from '@/pages/parent/Children';
-import ParentFees from '@/pages/parent/Fees';
-import ParentSchedule from '@/pages/parent/Schedule';
-import ParentSettings from '@/pages/parent/Settings';
-import ParentProfile from '@/pages/parent/Profile';
+import ParentChildren from '@/features/parent/pages/Children';
+import ParentFees from '@/features/parent/pages/Fees';
+import ParentSchedule from '@/features/parent/pages/Schedule';
+import ParentSettings from '@/features/parent/pages/Settings';
+import ParentProfile from '@/features/parent/pages/Profile';
 
 // Loading component
 const Loading = () => <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
 // Parent pages
-const ParentDashboard = lazy(() => import('@/pages/parent/Dashboard'));
+const ParentDashboard = lazy(() => import('@/features/parent/pages/Dashboard'));
 
 export const parentRoutes: RouteObject = {
     path: '/parent',

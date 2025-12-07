@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/carousel';
 import { BannerCourseResponse } from '@/types/bannercourse';
 import { ApiResponse } from '@/types/api';
-import { bannerCourseApi } from '@/api/bannerCourseApi';
+import { bannerCourseApi } from '@/features/banner/api/bannerCourseApi';
 import Autoplay from 'embla-carousel-autoplay';
 
 const HomeSlider = () => {
