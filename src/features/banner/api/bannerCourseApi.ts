@@ -2,10 +2,11 @@ import { BannerCourseResponse, CreateBannerCourseRequest, UpdateBannerCourseRequ
 import { ApiResponse, PageResponse } from '@/types/api';
 import axiosInstance from '@/services/axios';
 import axios from 'axios';
+import config from '@/config';
 
 export const bannerCourseApi = {
     getList: () => {
-        return axios.get<ApiResponse<BannerCourseResponse[]>>(`${import.meta.env.VITE_API_URL}/banner-courses/all`);
+        return axios.get<ApiResponse<BannerCourseResponse[]>>(`${config.apiUrl}/banner-courses/all`);
     },
 
     getAll: (title?: string, description?: string, page?: number, size?: number, sort?: string) => {

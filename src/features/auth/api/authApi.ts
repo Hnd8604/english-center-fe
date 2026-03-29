@@ -1,7 +1,8 @@
 import { LoginRequest, LoginResponse, LogoutRequest, VerifyOtpRequest, ResetPasswordRequest } from '../types/auth';
 import { ApiResponse } from '@/types/api';
 import axios from 'axios';
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+import config from '@/config';
+const API_URL = config.apiUrl;
 const authApi = {
     login: async (data: LoginRequest) => {
         const response = await axios.post<ApiResponse<LoginResponse>>(`${API_URL}/auth/login`, data);

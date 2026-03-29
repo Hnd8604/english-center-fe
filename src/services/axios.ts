@@ -1,8 +1,9 @@
 import axios from 'axios';
+import config from '@/config';
 
 // Tạo instance axios với cấu hình mặc định
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080/api',
+    baseURL: config.apiUrl,
     timeout: 30000,
     headers: {
         'Content-Type': 'application/json',
@@ -85,7 +86,7 @@ axiosInstance.interceptors.response.use(
 
                             // Gọi API refresh với token trong request body
                             const response = await axios.post(
-                                `${import.meta.env.VITE_API_URL || 'http://localhost:8080/api'}/auth/refresh`,
+                                `${config.apiUrl}/auth/refresh`,
                                 { token: refreshToken }
                             );
 
